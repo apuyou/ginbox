@@ -2,12 +2,13 @@
 
 const REDIRECT_URL = "https://arthur.puyou.fr/google_counter_redirect.html";
 const CLIENT_ID = "571355415903-tp4vni07ag81ejr07k8i6u8crp6mp7ju.apps.googleusercontent.com";
-const SCOPES = ["openid", "email", "profile"];
+const SCOPES = ["openid", "email", "profile", "https://www.googleapis.com/auth/gmail.readonly"];
 const AUTH_URL =
 `https://accounts.google.com/o/oauth2/auth
 ?client_id=${CLIENT_ID}
 &response_type=token
 &redirect_uri=${encodeURIComponent(REDIRECT_URL)}
+&login_hint=116900734053063255589
 &scope=${encodeURIComponent(SCOPES.join(' '))}`;
 const VALIDATION_BASE_URL="https://www.googleapis.com/oauth2/v3/tokeninfo";
 

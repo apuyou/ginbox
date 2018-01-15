@@ -1,11 +1,8 @@
 /*global getAccessToken*/
 
-function notifyUser(user) {
-  browser.notifications.create({
-    "type": "basic",
-    "title": "Google info",
-    "message": `Hi ${user.name}`
-  });}
+function notifyUser(response) {
+  browser.browserAction.setBadgeText({text: `${response.threadsTotal}`});
+}
 
 function logError(error) {
   console.error(`Error: ${error}`);
@@ -19,7 +16,7 @@ When the button's clicked:
 */
 browser.browserAction.onClicked.addListener(() => {
   getAccessToken()
-    .then(getUserInfo)
+    .then(getLabelInfo)
     .then(notifyUser)
     .catch(logError);
 });
