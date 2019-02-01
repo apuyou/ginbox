@@ -3,12 +3,6 @@
   "name": "Google Counter",
   "version": "1",
   "manifest_version": 2,
-  "applications": {
-    "gecko": {
-      "id": "google-user-info@mozilla.org",
-      "strict_min_version": "53a1"
-    }
-  },
 
   "icons": {
     "48": "icons/person-48.png"
@@ -28,6 +22,7 @@
 
   "background": {
     "scripts": [
+      "background/polyfill.js",
       "background/authorize.js",
       "background/userinfo.js",
       "background/main.js"

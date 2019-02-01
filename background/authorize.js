@@ -1,6 +1,7 @@
 /* exported getAccessToken */
 
-const REDIRECT_URL = "https://arthur.puyou.fr/google_counter_redirect.html";
+// const REDIRECT_URL = "https://arthur.puyou.fr/google_counter_redirect.html";
+const REDIRECT_URL = "https://jpkmclaliiiompakglfkcokpfenfaagm.chromiumapp.org/";
 const CLIENT_ID = "571355415903-tp4vni07ag81ejr07k8i6u8crp6mp7ju.apps.googleusercontent.com";
 const SCOPES = ["openid", "email", "profile", "https://www.googleapis.com/auth/gmail.readonly"];
 const AUTH_URL =
@@ -33,6 +34,7 @@ Note that the Google page talks about an "audience" property, but in fact
 it seems to be "aud".
 */
 function validate(redirectURL) {
+  console.log('validate');
   const accessToken = extractAccessToken(redirectURL);
   if (!accessToken) {
     throw "Authorization failure";

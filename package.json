@@ -1,0 +1,14 @@
+{
+  "name": "ginbox",
+  "version": "1.0.0",
+  "description": "A counter for your Gmail Inbox.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webextension-polyfill": "^0.2.1"
+  }
+}
